@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="icon" type="image/png" href="./assets/d3-logo.png"/>
+    <link rel="stylesheet" href="styles.css">
+    <title>Fitness Tracker</title>
+</head>
+<body class="grey darken-4">
+    
+    <div class="nav z-depth-0">
+        <div class="section center">
+            <h3 class="white-text center">- Fitness Tracker -</h3>
+        </div>
+    </div>
+
+    <div class="section center">
+        <p class="grey-text flow-text">A fitness tracker for the iron people</p>
+    </div>
+
+    <div class="container section">
+        <div class="row">
+            <div class="col s6 m6">
+                <button class="active" data-activity="cycling">Cycling</button>
+                <button data-activity="running">Running</button>
+                <button data-activity="swimming">Swimming</button>
+                <button data-activity="walking">Walking</button>
+            </div>
+            <div class="col s6 m5 push-m1">
+                <div class="canvas"></div>
+            </div>
+        </div>
+    
+        <div class="row">
+            <form class="col m6 push-m3">
+                <p class="flow-text grey-text center">
+                    How much <span>cycling</span> have you done today?</p>
+                    <input type="text" class="grey-text" id="cycling" placeholder="Distance in metres" />
+                    <p class="center pink-text error text«-lighten-1"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Firebase-App -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+    <script src="config.js"></script>
+    <!-- d3.js -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!-- Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+    </script>  
+    <!-- My JS files -->
+    <script src="script.js"></script>
+    <script src="graph.js"></script>  
+</body>
+</html>
